@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use SMSkin\LumenMake\Requests\FormRequest;
+use AGSystems\LumenMake\Requests\FormRequest;
 
 class DummyClass extends FormRequest
 {
@@ -11,18 +11,28 @@ class DummyClass extends FormRequest
      *
      * @return bool
      */
-     public function authorize()
-     {
+    public function authorize()
+    {
         return false;
-     }
+    }
 
-     /**
-      * Get the validation rules that apply to the request.
-      *
-      * @return array
-      */
-      public function rules()
-      {
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
         return [];
-      }
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [];
+    }
 }

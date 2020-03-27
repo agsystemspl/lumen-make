@@ -25,11 +25,11 @@ class EventMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/event.stub';
+        return __DIR__ . '/stubs/event.stub';
     }
 
     protected function getDefaultNamespace($namespace)
     {
-        return $namespace.'\Events';
+        return $namespace . '\Events';
     }
 }

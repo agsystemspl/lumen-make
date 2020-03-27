@@ -25,11 +25,11 @@ class MiddlewareMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/middleware.stub';
+        return __DIR__ . '/stubs/middleware.stub';
     }
 
     protected function getDefaultNamespace($namespace)
     {
-        return $namespace.'\Http\Middleware';
+        return $namespace . '\Http\Middleware';
     }
 }

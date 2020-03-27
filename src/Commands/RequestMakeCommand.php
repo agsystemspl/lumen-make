@@ -25,11 +25,11 @@ class RequestMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/request.stub';
+        return __DIR__ . '/stubs/request.stub';
     }
 
     protected function getDefaultNamespace($namespace)
     {
-        return $namespace.'\Http\Requests';
+        return $namespace . '\Http\Requests';
     }
 }
