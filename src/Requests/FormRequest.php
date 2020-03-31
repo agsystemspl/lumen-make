@@ -88,6 +88,19 @@ class FormRequest extends Request implements ValidatesWhenResolved
     }
 
     /**
+     * Get the validated data from the request.
+     *
+     * @return array
+     */
+    public function validated()
+    {
+        $rules = $this->container->call([$this, 'rules']);
+        return $this->only(collect($rules)->keys()->map(function ($rule) {
+            return explode('.', $rule)[0];
+        })->unique()->toArray());
+    }
+
+    /**
      * Handle a failed validation attempt.
      *
      * @param \Illuminate\Contracts\Validation\Validator $validator
